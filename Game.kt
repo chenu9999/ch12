@@ -5,6 +5,7 @@ fun main() {
     //val isImmortal = false 用不到
 
     val player = Player()
+    player.castFireball()
 
     //光環
     val karma = (Math.pow(Math.random(), (110 - healthPoints) / 100.0) * 20 ).toInt()
@@ -15,8 +16,6 @@ fun main() {
 
     //玩家狀態
     printPlayerStatus(healthPoints, auraColor, isBlessed, name, healthStatus)
-
-    drink(glass=castFireball(60))
 }
 
 private fun printPlayerStatus(
@@ -53,12 +52,7 @@ private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean) =
         else -> "狀態不妙"
     }
 
-private fun castFireball(numFireBalls: Int = 2): Int {
-    println("已喝下$numFireBalls" + "杯Fireball")
-    return numFireBalls
-}
-
-private fun drink(glass: Int) {
+/*private fun drink(glass: Int) {
     val drunkenness = when (glass) {
         0 -> "清醒"
         in 1..10 -> "微醺"
@@ -69,4 +63,4 @@ private fun drink(glass: Int) {
         else -> "沒意識"
     }
     println("酒醉狀態: $drunkenness")
-}
+}*/
