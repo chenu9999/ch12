@@ -1,8 +1,4 @@
 fun main() {
-    var healthPoints = 89
-    var isBlessed = true
-    //val isImmortal = false 用不到
-
     val player = Player()
     player.castFireball()
 
