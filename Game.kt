@@ -1,25 +1,17 @@
 fun main() {
     val player = Player()
-    player.castFireball()
+    player.castFireball(5)
 
     //光環
-    val auraColor = auraColor(karma)
-
-    val healthStatus = formatHealthStatus(healthPoints, isBlessed)
+    //player.auraColor() 用不到
 
     //玩家狀態
-    printPlayerStatus(healthPoints, auraColor, isBlessed, player.name, healthStatus)
+    printPlayerStatus(player)
 }
 
-private fun printPlayerStatus(
-    healthPoints: Int,
-    auraColor: String,
-    isBlessed: Boolean,
-    name: String,
-    healthStatus: String
-) {
-    val statusFormatString = "(血量:$healthPoints) (光環顏色:$auraColor) " +
-            "(運氣:${if (isBlessed) "好" else "壞"}) -> $name $healthStatus"
+private fun printPlayerStatus(player: Player) {
+    val statusFormatString = "(血量:${player.healthPoints}) (光環顏色:${player.auraColor()}) " +
+            "(運氣:${if (player.isBlessed) "好" else "壞"}) -> ${player.name} ${player.formatHealthStatus()}"
     println(statusFormatString)
 }
 

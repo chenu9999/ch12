@@ -2,7 +2,7 @@ class Player {
     var name = "madrigal"
         get() = field.capitalize()
         private set(value) {
-            field = value.trim()
+            field = value.trim()  //trim()去除空白
         }
 
     var healthPoints = 89
