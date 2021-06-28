@@ -1,5 +1,4 @@
 fun main() {
-    val name = "Madrigal"
     var healthPoints = 89
     var isBlessed = true
     //val isImmortal = false 用不到
