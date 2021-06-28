@@ -9,7 +9,7 @@ class Player {
     var isBlessed = true
     private val isImmortal = false
 
-    private fun auraColor(): String {
+    fun auraColor(): String {
         val auraVisible = isBlessed && healthPoints > 50 || isImmortal
         val karma = (Math.pow(Math.random(), (110 - healthPoints) / 100.0) * 20).toInt()
         val auraColor = if (auraVisible) when (karma) {
@@ -22,7 +22,7 @@ class Player {
         return auraColor
     }
 
-    private fun formatHealthStatus() =
+    fun formatHealthStatus() =
         when (healthPoints) {
             100 -> "狀態極佳"
             in 90..99 -> "有一些小擦傷"
